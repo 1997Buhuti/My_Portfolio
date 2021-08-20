@@ -1,0 +1,8 @@
+.imageCard{
+
+}
+
+Card.Body{
+    border: 1px solid green;
+    background: aqua;
+}
