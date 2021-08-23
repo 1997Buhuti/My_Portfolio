@@ -1,13 +1,14 @@
 import React from 'react';
 import { About } from '../styles';
 import styled from 'styled-components';
-import Toggle from './Toggle';
 import { AnimateSharedLayout } from 'framer-motion';
 //Scroll animation
 import { reveal } from '../animation';
 import { useScroll } from './useScroll';
 import { Card, Button, Row, Col, Accordion } from 'react-bootstrap';
-import{useState} from 'react';
+import led from '../img/led.jpg'
+import Itech from '../img/Itech.jpg'
+import aiesec from '../img/aiesec.jpg'
 
 const FaqSection = () => {
   const [element, controls] = useScroll();
@@ -80,7 +81,7 @@ const FaqSection = () => {
                   <Col xs={12} xl={4}>
                     <Card className='imageCard' bg='dark' style={{ width: '18rem' }}>
                       <Card.Img variant='top'
-                                src='https://media-exp1.licdn.com/dms/image/C562DAQGjh7Z9n5_8tA/profile-treasury-image-shrink_1920_1920/0/1597419031450?e=1629486000&v=beta&t=zOSvwU2Tx9sw3fluODvEikeDOQSGl7Qc2p8q4efDVyQ' />
+                                src={led} />
                       <Card.Body>
                         <Card.Text>
                           Organizing Committee member for LED Youth Forum 2019 (Branding & Marketing ambassador)
@@ -93,7 +94,7 @@ const FaqSection = () => {
                   <Col xs={12} xl={4}>
                     <Card className='imageCard' bg='dark' style={{ width: '18rem' }}>
                       <Card.Img variant='top'
-                                src='https://media-exp1.licdn.com/dms/image/C562DAQFNfW_W7kTjmA/profile-treasury-image-shrink_1920_1920/0/1597417719306?e=1629547200&v=beta&t=CqK2QIx1P5ICyYMo_53CMdnvr_L_23OjXwxgE8BfxLM' />
+                                src={Itech}/>
                       <Card.Body>
                         <Card.Text>
                           Organizing Committee President for project 'I tech'
@@ -107,7 +108,7 @@ const FaqSection = () => {
                   <Col xs={12} xl={4}>
                     <Card className='imageCard' bg='dark' style={{ width: '18rem' }}>
                       <Card.Img variant='top'
-                                src='https://media-exp1.licdn.com/dms/image/C562DAQFcKksThgKL_Q/profile-treasury-image-shrink_1920_1920/0/1597418455624?e=1629550800&v=beta&t=aNxiKOXvMsygyR_Qn5ApiFR_rXq1Eds6SC6mYinqyag' />
+                                src= {aiesec}/>
                       <Card.Body>
                         <Card.Text>
                           Organizing Committee Vice President in Marketing & Digital Experience (Leadership Development
