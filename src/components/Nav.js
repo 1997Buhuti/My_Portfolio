@@ -31,7 +31,7 @@ const Nav = () => {
           />
         </li>
         <li>
-          <Link to="">1. Contact Me</Link>
+          <Link to="/contact">1. Contact Me</Link>
           <Line
             transition={{ duration: 0.75 }}
             initial={{ width: '0%' }}
