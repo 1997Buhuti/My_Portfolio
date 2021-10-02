@@ -9,7 +9,7 @@ const Toggle = ({ children, title }) => {
     <StyledToggle layout onClick={() => setToggle(!toggle)}>
       <motion.h4 layout>{title}</motion.h4>
       {toggle ? children : ''}
-      <div className="faq-line"></div>
+      <div className='faq-line'/>
     </StyledToggle>
   );
 };

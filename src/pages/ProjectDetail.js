@@ -1,25 +1,25 @@
 import React, { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
-import { MovieState } from '../movieState';
+import { projectState } from '../projectState';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { pageAnimation } from '../animation';
 import ScrollTop from '../components/ScrollTop';
 
-const MovieDetail = () => {
+const ProjectDetail = () => {
   const history = useHistory();
   const url = history.location.pathname;
-  const [movies, setMovies] = useState(MovieState);
-  const [movie, setMovie] = useState(null);
+  const [projects, setProjects] = useState(projectState);
+  const [project, setProject] = useState(null);
 
   useEffect(() => {
-    const currentMovie = movies.filter((stateMovie) => stateMovie.url === url);
-    setMovie(currentMovie[0]);
-  }, [movies, url]);
+    const currentProject = projects.filter((projectState) => projectState.url === url);
+    setProject(currentProject[0]);
+  }, [projects, url]);
 
   return (
     <>
-      {movie && (
+      {project && (
         <Details
           variants={pageAnimation}
           exit="exit"
@@ -27,20 +27,28 @@ const MovieDetail = () => {
           animate="show"
         >
           <HeadLine>
-            <h2>{movie.title}</h2>
-            <img src={movie.mainImg} alt="" />
+            <h2>{project.title}</h2>
+            <img src={project.mainImg} alt="" />
           </HeadLine>
           <Awards>
-            {movie.awards.map((award) => (
+            {project.projectDetails.map((project) => (
               <Award
-                key={award.title}
-                title={award.title}
-                description={award.description}
+                key={project.title}
+                title={project.title}
+                description={project.description}
               />
             ))}
           </Awards>
+          <URLInfo>
+            <pre>
+              URL : <a target="_blank" href={project.projectURL}>{project.projectURL}</a>
+            </pre>
+            <pre>
+              GitHub Link : <a target="_blank" href={project.githubRepo}>{project.githubRepo}</a>
+            </pre>
+          </URLInfo>
           <ImageDisplay>
-            <img src={movie.secondaryImg} alt="" />
+            <img src={project.secondaryImg} alt="" />
           </ImageDisplay>
         </Details>
       )}
@@ -49,21 +57,37 @@ const MovieDetail = () => {
   );
 };
 
-const Award = ({ title, description }) => {
+const Award = ({ title, description, projectURL, githubRepo }) => {
   return (
-    <AwardStyle>
+    <ProjectStyle>
       <h3>{title}</h3>
       <div className="line"></div>
       <p>{description}</p>
-    </AwardStyle>
+    </ProjectStyle>
   );
 };
 
 const Details = styled(motion.div)`
   color: white;
 `;
+const URLInfo = styled.div`
+  width: 100%;
+  align-content: center;
+  text-align: center;
+  a{
+    color: red;
+    :hover{
+      color: blue;
+    }
+    cursor: pointer;
+  }
+  pre{
+    color: red;
+  }
+`;
 const HeadLine = styled.div`
   min-height: 90vh;
+  //max-width: 30vw;
   padding-top: 20vh;
   position: relative;
   h2 {
@@ -89,11 +113,12 @@ const Awards = styled.div`
     margin: 2rem 2rem;
   }
 `;
-const AwardStyle = styled.div`
+const ProjectStyle = styled.div`
   padding: 5rem;
   h3 {
     font-size: 2rem;
   }
+ 
   .line {
     width: 50%;
     background: #23d997;
@@ -113,4 +138,4 @@ const ImageDisplay = styled.div`
   }
 `;
 
-export default MovieDetail;
+export default ProjectDetail;

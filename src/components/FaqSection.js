@@ -12,17 +12,19 @@ import aiesec from '../img/aiesec.jpg'
 
 const FaqSection = () => {
   const [element, controls] = useScroll();
+  const isMobile = window.innerWidth > 768;
   return (
     <Faq
       transition={{ duration: 0.5 }}
       ref={element}
       animate={controls}
       initial='hidden'
-      variants={reveal}
+      variants={isMobile && reveal}
     >
       <h2>
         Any Questions? <span>FAQ</span>
       </h2>
+
       <AnimateSharedLayout>
         <div className="accordion" id="accordionExample">
           <div>

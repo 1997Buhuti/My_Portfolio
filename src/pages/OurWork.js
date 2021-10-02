@@ -3,8 +3,9 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 //Images
 import athelete from '../img/athlete-small.png';
-import theracer from '../img/theracer-small.png';
+import smartwear from '../img/smartwear.JPG';
 import goodtimes from '../img/goodtimes-small.png';
+import ecom1 from '../img/ecommerce1.JPG';
 //Animation
 import { motion } from 'framer-motion';
 import { useScroll } from '../components/useScroll';
@@ -38,11 +39,11 @@ const OurWork = () => {
         <Frame4 variants={slider}></Frame4>
       </motion.div>
       <Movie variants={movieContainer}>
-        <motion.h2 variants={fade}>The Athlete</motion.h2>
+        <motion.h2 variants={fade}>Ecommerce Application (Still at Development)</motion.h2>
         <motion.div variants={lineAnim} className="line"></motion.div>
-        <Link to="/work/the-athlete">
+        <Link to="/work/e-commerce">
           <Hide>
-            <motion.img variants={photoAnim} src={athelete} alt="athlete" />
+            <motion.img variants={photoAnim} src={ecom1} alt="EcomApp" />
           </Hide>
         </Link>
       </Movie>
@@ -53,10 +54,10 @@ const OurWork = () => {
         animate={controls}
         initial="hidden"
       >
-        <h2>The Racer</h2>
+        <h2>Java Desktop App (Smartwear T-Shirts)</h2>
         <motion.div variants={lineAnim} className="line"></motion.div>
-        <Link to="/work/the-racer">
-          <img src={theracer} alt="the-race" />
+        <Link to="/work/SmartWear">
+          <img src={smartwear} alt="the-race" />
         </Link>
       </Movie>
       <Movie
@@ -80,6 +81,7 @@ const Work = styled(motion.div)`
   min-height: 100vh;
   overflow: hidden;
   padding: 5rem 10rem;
+  background-color: black;
   h2 {
     padding: 1rem 0rem;
   }
