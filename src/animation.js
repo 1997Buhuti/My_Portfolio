@@ -24,6 +24,7 @@ export const titleAnim = {
   },
 };
 
+
 export const fade = {
   hidden: { opacity: 0 },
   show: {

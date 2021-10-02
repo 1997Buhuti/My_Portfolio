@@ -8,31 +8,32 @@ import { motion } from 'framer-motion';
 import Wave from './Wave';
 
 const AboutSection = () => {
+  const isMobile = true;
   return (
     <About>
       <Description>
         <div className="title">
           <Hide>
-            <motion.h2 variants={titleAnim}>Make your</motion.h2>
+            <motion.h2 variants={isMobile && titleAnim}>Make your</motion.h2>
           </Hide>
           <Hide>
-            <motion.h2 variants={titleAnim}>
-              your <span>dream project </span> come true
+            <motion.h2 variants={isMobile && titleAnim}>
+              your <span>dream project </span> come
             </motion.h2>
           </Hide>
           <Hide>
-            <motion.h2 variants={titleAnim}>true.</motion.h2>
+            <motion.h2 variants={isMobile && titleAnim}>true.</motion.h2>
           </Hide>
         </div>
-        <motion.p variants={fade}>
+        <motion.p variants={isMobile && fade}>
           Hi I'm Manakal a fullstack web developer,
           Tech enthusiast.
           Contact Me to build your dream web project.
         </motion.p>
-        <motion.button variants={fade}>Contact Me</motion.button>
+        <motion.button variants={isMobile && fade}>Contact Me</motion.button>
       </Description>
       <Image>
-        <motion.img variants={photoAnim} src={myImage} alt="camera guy" />
+        <motion.img variants={isMobile && photoAnim} src={myImage} alt="camera guy" />
       </Image>
       <Wave />
     </About>

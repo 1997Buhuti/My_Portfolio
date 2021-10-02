@@ -5,7 +5,7 @@ import GlobalStyle from './components/GlobalStyle';
 import AboutUs from './pages/AboutUs';
 import OurWork from './pages/OurWork';
 import ContactUs from './pages/ContactUs';
-import MovieDetail from './pages/MovieDetail';
+import ProjectDetail from './pages/ProjectDetail';
 import Nav from './components/Nav';
 //Router
 import { Route, Switch, useLocation } from 'react-router-dom';
@@ -30,7 +30,7 @@ function App() {
             <ContactUs />
           </Route>
           <Route path="/work/:id">
-            <MovieDetail />
+            <ProjectDetail />
           </Route>
         </Switch>
       </AnimatePresence>

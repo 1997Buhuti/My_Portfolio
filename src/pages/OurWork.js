@@ -2,9 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 //Images
-import athelete from '../img/athlete-small.png';
-import theracer from '../img/theracer-small.png';
-import goodtimes from '../img/goodtimes-small.png';
+import smartwear from '../img/smartwear.JPG';
+import ecom1 from '../img/ecommerce1.JPG';
+import Library1 from '../img/Library1.JPG';
 //Animation
 import { motion } from 'framer-motion';
 import { useScroll } from '../components/useScroll';
@@ -32,17 +32,17 @@ const OurWork = () => {
     >
       <ScrollTop />
       <motion.div variants={sliderContainer}>
-        <Frame1 variants={slider}></Frame1>
-        <Frame2 variants={slider}></Frame2>
-        <Frame3 variants={slider}></Frame3>
-        <Frame4 variants={slider}></Frame4>
+        <Frame1 variants={slider}/>
+        <Frame2 variants={slider}/>
+        <Frame3 variants={slider}/>
+        <Frame4 variants={slider}/>
       </motion.div>
       <Movie variants={movieContainer}>
-        <motion.h2 variants={fade}>The Athlete</motion.h2>
-        <motion.div variants={lineAnim} className="line"></motion.div>
-        <Link to="/work/the-athlete">
+        <motion.h2 variants={fade}>Ecommerce Application (Still at Development)</motion.h2>
+        <motion.div variants={lineAnim} className="line"/>
+        <Link to="/work/e-commerce">
           <Hide>
-            <motion.img variants={photoAnim} src={athelete} alt="athlete" />
+            <motion.img variants={photoAnim} src={ecom1} alt="EcomApp" />
           </Hide>
         </Link>
       </Movie>
@@ -53,10 +53,10 @@ const OurWork = () => {
         animate={controls}
         initial="hidden"
       >
-        <h2>The Racer</h2>
+        <h2>Java Desktop App (Smartwear T-Shirts)</h2>
         <motion.div variants={lineAnim} className="line"></motion.div>
-        <Link to="/work/the-racer">
-          <img src={theracer} alt="the-race" />
+        <Link to="/work/SmartWear">
+          <img src={smartwear} alt="the-race" />
         </Link>
       </Movie>
       <Movie
@@ -66,10 +66,10 @@ const OurWork = () => {
         animate={controls2}
         initial="hidden"
       >
-        <h2>Good Times</h2>
-        <motion.div variants={lineAnim} className="line"></motion.div>
-        <Link to="/work/good-times">
-          <img src={goodtimes} alt="good-times" />
+        <h2>Library Application</h2>
+        <motion.div variants={lineAnim} className="line"/>
+        <Link to="/work/Library">
+          <img src={Library1} alt="good-times" />
         </Link>
       </Movie>
     </Work>
@@ -80,11 +80,17 @@ const Work = styled(motion.div)`
   min-height: 100vh;
   overflow: hidden;
   padding: 5rem 10rem;
+  background-color: black;
   h2 {
-    padding: 1rem 0rem;
+    padding: 1rem ;
   }
   @media (max-width: 1500px) {
     padding: 2rem 2rem;
+  }
+  @media (max-width: 768px) {
+    h2{
+      font-size: x-large;
+    }
   }
 `;
 
@@ -97,7 +103,7 @@ const Movie = styled(motion.div)`
   }
   img {
     width: 100%;
-    height: 70vh;
+    height: auto;
     object-fit: cover;
   }
 `;

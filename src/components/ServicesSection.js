@@ -14,12 +14,13 @@ import { useScroll } from './useScroll';
 
 const ServicesSection = () => {
   const [element, controls] = useScroll();
+  const isMobile = window.innerWidth > 768;
   return (
     <Services
       transition={{ duration: 0.75 }}
       ref={element}
       variants={reveal}
-      animate={controls}
+      animate={isMobile && controls}
       initial="hidden"
     >
       <Description>
