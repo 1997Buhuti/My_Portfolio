@@ -57,11 +57,11 @@ const ProjectDetail = () => {
   );
 };
 
-const Award = ({ title, description, projectURL, githubRepo }) => {
+const Award = ({ title, description}) => {
   return (
     <ProjectStyle>
       <h3>{title}</h3>
-      <div className="line"></div>
+      <div className="line"/>
       <p>{description}</p>
     </ProjectStyle>
   );
@@ -87,7 +87,6 @@ const URLInfo = styled.div`
 `;
 const HeadLine = styled.div`
   min-height: 90vh;
-  //max-width: 30vw;
   padding-top: 20vh;
   position: relative;
   h2 {
@@ -98,8 +97,14 @@ const HeadLine = styled.div`
   }
   img {
     width: 100%;
-    height: 70vh;
+    height: auto;
     object-fit: cover;
+  }
+  @media (max-width:768px){
+    img{
+      margin-top: 1rem;
+    }
+    min-height: auto;
   }
 `;
 const Awards = styled.div`
@@ -108,7 +113,7 @@ const Awards = styled.div`
   margin: 5rem 10rem;
   align-items: center;
   justify-content: space-around;
-  @media (max-width: 1500px) {
+  @media (max-width: 768px) {
     display: block;
     margin: 2rem 2rem;
   }
@@ -123,17 +128,17 @@ const ProjectStyle = styled.div`
     width: 50%;
     background: #23d997;
     height: 0.5rem;
-    margin: 1rem 0rem;
+    margin: 1rem 0;
   }
   p {
-    padding: 2rem 0rem;
+    padding: 2rem 0;
   }
 `;
 const ImageDisplay = styled.div`
   min-height: 50vh;
   img {
     width: 100%;
-    height: 100vh;
+    height: auto;
     object-fit: cover;
   }
 `;

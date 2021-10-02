@@ -5,7 +5,8 @@ import { AnimateSharedLayout } from 'framer-motion';
 //Scroll animation
 import { reveal } from '../animation';
 import { useScroll } from './useScroll';
-import { Card, Button, Row, Col, Accordion } from 'react-bootstrap';
+import { Card, Row, Col } from 'react-bootstrap';
+import { Link, useHistory } from 'react-router-dom';
 import led from '../img/led.jpg'
 import Itech from '../img/Itech.jpg'
 import aiesec from '../img/aiesec.jpg'
@@ -13,6 +14,12 @@ import aiesec from '../img/aiesec.jpg'
 const FaqSection = () => {
   const [element, controls] = useScroll();
   const isMobile = window.innerWidth > 768;
+  const history = useHistory();
+
+  console.log("history=");
+  console.log(history);
+  const newURL = 'https://www.linkedin.com/in/dpbmanakal';
+
   return (
     <Faq
       transition={{ duration: 0.5 }}
@@ -33,7 +40,7 @@ const FaqSection = () => {
                         aria-expanded="true" aria-controls="collapseOne">
                   Who Am I
                 </h4>
-              <div className="faq-line"></div>
+              <div className="faq-line"/>
             </div>
 
             <div id="collapseOne" className="collapse" aria-labelledby="headingOne"
@@ -54,7 +61,7 @@ const FaqSection = () => {
                   aria-expanded="true" aria-controls="collapseOne">
                 What Products do I offer?
               </h4>
-              <div className="faq-line"></div>
+              <div className="faq-line"/>
             </div>
 
             <div id="collapseTwo" className="collapse" aria-labelledby="headingTwo"
@@ -73,7 +80,7 @@ const FaqSection = () => {
                   aria-expanded="true" aria-controls="collapseOne">
                 Leadership Experience
               </h4>
-              <div className="faq-line"></div>
+              <div className="faq-line"/>
             </div>
 
             <div id="collapseThree" className="collapse" aria-labelledby="headingThree"
@@ -88,7 +95,7 @@ const FaqSection = () => {
                         <Card.Text>
                           Organizing Committee member for LED Youth Forum 2019 (Branding & Marketing ambassador)
                         </Card.Text>
-                        <Button variant='primary'>see more..</Button>
+                        <Link to={{ pathname: newURL }} className="btn btn-primary" target="_blank">see more..</Link>
                       </Card.Body>
                     </Card>
                   </Col>
@@ -102,7 +109,7 @@ const FaqSection = () => {
                           Organizing Committee President for project 'I tech'
                           A volunteering project organized by aiesec in colombo north.
                         </Card.Text>
-                        <Button variant='primary'>see more..</Button>
+                        <Link to={{ pathname: newURL }} className="btn btn-primary" target="_blank">see more..</Link>
                       </Card.Body>
                     </Card>
                   </Col>
@@ -116,7 +123,8 @@ const FaqSection = () => {
                           Organizing Committee Vice President in Marketing & Digital Experience (Leadership Development
                           Seminar 2019)
                         </Card.Text>
-                        <Button variant='primary'>see more..</Button>
+                        {/* eslint-disable-next-line no-restricted-globals */}
+                        <Link to={{ pathname: newURL }} className="btn btn-primary" target="_blank">see more..</Link>
                       </Card.Body>
                     </Card>
                   </Col>
@@ -140,7 +148,7 @@ const Faq = styled(About)`
   
   h4{
     cursor: pointer;
-    padding: 2rem 0rem;
+    padding: 2rem 0;
   }
   
   h2 {
@@ -151,15 +159,15 @@ const Faq = styled(About)`
   .faq-line {
     background: #cccccc;
     height: 0.2rem;
-    margin: 2rem 0rem;
+    margin: 2rem 0;
     width: 100%;
   }
 
   .answer {
-    padding: 2rem 0rem;
+    padding: 2rem 0;
 
     p {
-      padding: 1rem 0rem;
+      padding: 1rem 0;
     }
   }
 

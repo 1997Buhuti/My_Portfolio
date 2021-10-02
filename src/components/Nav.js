@@ -31,7 +31,7 @@ const Nav = () => {
           />
         </li>
         <li>
-          <Link to="/contact">1. Contact Me</Link>
+          <Link to="/contact">3. Contact Me</Link>
           <Line
             transition={{ duration: 0.75 }}
             initial={{ width: '0%' }}
@@ -74,7 +74,7 @@ const StyledNav = styled.nav`
   }
   @media (max-width: 1500px) {
     flex-direction: column;
-    padding: 2rem 0rem;
+    padding: 2rem 0;
     ul {
       padding: 2rem;
       justify-content: space-around;
@@ -94,7 +94,7 @@ const Line = styled(motion.div)`
   bottom: -80%;
   left: 60%;
   @media (max-width: 1500px) {
-    left: 0%;
+    left: 0;
   }
 `;
 

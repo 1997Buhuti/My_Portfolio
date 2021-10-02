@@ -3,10 +3,9 @@ import ecommerce1 from './img/ecommerce1.JPG';
 import ecommerce2 from './img/ecommerce2.JPG';
 import smartwear from './img/smartwear.JPG';
 import smartwear2 from './img/smartwear2.JPG';
-import theracer from './img/theracer-small.png';
-import athlete2 from './img/athlete2.png';
-import goodtimes2 from './img/good-times2.jpg';
-import theracer2 from './img/the-racer2.jpg';
+import Library1 from './img/Library1.JPG';
+import Library2 from './img/Library2.JPG';
+
 
 export const projectState = () => {
   return [
@@ -68,28 +67,29 @@ export const projectState = () => {
     },
     {
       title: 'Library App',
-      mainImg: theracer,
+      mainImg: Library1,
       url: '/work/Library',
-      secondaryImg: theracer2,
+      secondaryImg: Library2,
       projectDetails: [
         {
-          title: 'Truly A masterpiece',
+          title: 'Simple Library App',
           description:
-            '“Lorem Ipsum is simply dummy text of the printing and typesetting industry.”',
+            '“This is a very basic app developed to understand the fundamental concepts of React,Typescript, sass, State Management and' +
+            'react-bootstrap .”',
         },
         {
-          title: 'Fresh look on a brutal sport.',
+          title: 'Fully Mobile Responsive.',
           description:
-            '“Lorem Ipsum is simply dummy text of the printing and typesetting industry.”',
+            '“This project is fully mobile responsive powered with react-bootstrap grid system.”',
         },
         {
-          title: 'It’s okay lmao.',
+          title: 'Live Preview',
           description:
-            '“Lorem Ipsum is simply dummy text of the printing and typesetting industry.”',
+            '“ You can view a live Demo of this project by clicking the link below..”',
         },
       ],
-      projectURL:"https://teamkitkatstore.codes/",
-      githubRepo:""
+      projectURL:"https://my-react-library-app.herokuapp.com",
+      githubRepo:"https://tinyurl.com/n5en86zn"
     },
   ];
 };
