@@ -18,7 +18,7 @@ const AboutSection = () => {
           </Hide>
           <Hide>
             <motion.h2 variants={isMobile && titleAnim}>
-              your <span>dream project </span> come
+              <span>dream project </span> come
             </motion.h2>
           </Hide>
           <Hide>
