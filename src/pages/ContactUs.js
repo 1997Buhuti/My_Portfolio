@@ -55,7 +55,8 @@ const ContactUs = () => {
             </Row>
             <Row styele={{border:"2px solid green "}}>
               <Col className="ml-5">
-                <h6><FileEarmarkPdfFill/>: <a href="https://tinyurl.com/465mwjm9" target="_blank">Manakal's CV</a></h6>
+                <h6><FileEarmarkPdfFill/>: <a href="https://drive.google.com/file/d/171bsqdlgiXPqzc8OuQvds4CHK1cAtvH9/view?usp=sharing"
+                                              target="_blank">Manakal's CV</a></h6>
               </Col>
             </Row>
           </Social>
