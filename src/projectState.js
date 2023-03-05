@@ -5,10 +5,60 @@ import smartwear from './img/smartwear.JPG';
 import smartwear2 from './img/smartwear2.JPG';
 import Library1 from './img/Library1.JPG';
 import Library2 from './img/Library2.JPG';
-
+import Acis1 from './img/ACIS1.png';
+import Acis2 from './img/ACIS2.png';
+import BSB1 from './img/BSB1.png';
+import BSB2 from './img/BSB2.png';
 
 export const projectState = () => {
   return [
+    {
+      title: 'ACIS by AIMS',
+      mainImg: Acis1,
+      secondaryImg: Acis2,
+      url: '/work/acis',
+      projectDetails: [
+        {
+          title: 'Project Details.',
+          description: `ACIS is an inventory management and order and fulfilment system that enables both Bodyshop’s and cosmetic repairers to order stock automatically on a tablet and manage their paint and consumables more effectively and profitably`,
+        },
+        {
+          title: 'Tech Stack',
+          description:
+            '“I contriubuted for this project as a fronte-end developer using Angular 10, RxJS,Bootstrap and SASS"',
+        },
+        {
+          title: 'e2e testing',
+          description: `Collaborated with the QA team to develop and implement automated end-to-end (E2E) testing for ACIS , to	
+            Utilized Cypress to develop and execute automated E2E test cases, ensuring a high level of test coverage and accuracy.`,
+        },
+      ],
+      projectURL: 'https://www.acisaims.com',
+      githubRepo: '',
+    },
+    {
+      title: 'BSB V2 (Body Shop Booster Version 2)',
+      mainImg: BSB1,
+      secondaryImg: BSB2,
+      url: '/work/BSB',
+      projectDetails: [
+        {
+          title: 'Project Details.',
+          description: `BSB-V2 (Bodyshop Booster) project, which focused on improving customer satisfaction and sales using the latest cloud technologies`,
+        },
+        {
+          title: 'Tech Stack',
+          description: `NodeJS, Serverless framework 3 with TypeScript, MongoDB along with Mongoose ODM, MySQL with  TypeORM, ANgular 15, RXJS, NGxs for state mgt. and PrimenNg with Primeflex`,
+        },
+        {
+          title: 'Cutting Edge Serverless Technology',
+          description:
+            'Contributed for this project using AWS serverless computing which is a powerful paradigm that simplifies application development by removing the need for managing infrastructure, while providing automatic scalability, cost-effectiveness, built-in fault tolerance, easy integration with other services, and faster time-to-market, making it an increasingly popular choice for building scalable, cost-effective, and reliable applications.',
+        },
+      ],
+      projectURL: 'https://www.bodyshopbooster.com//',
+      githubRepo: '',
+    },
     {
       title: 'MERN e-commerce site',
       mainImg: ecommerce1,
@@ -34,8 +84,8 @@ export const projectState = () => {
             'Keep track on your sales & customers in your fingertips.”',
         },
       ],
-      projectURL:"https://teamkitkatstore.codes/",
-      githubRepo:"https://tinyurl.com/4ebcf62p"
+      projectURL: 'https://teamkitkatstore.codes/',
+      githubRepo: 'https://tinyurl.com/4ebcf62p',
     },
 
     {
@@ -63,7 +113,7 @@ export const projectState = () => {
         },
       ],
       //projectURL:"https://teamkitkatstore.codes/",
-      githubRepo:"https://tinyurl.com/3usvzye5"
+      githubRepo: 'https://tinyurl.com/3usvzye5',
     },
     {
       title: 'Library App',
@@ -88,8 +138,8 @@ export const projectState = () => {
             '“ You can view a live Demo of this project by clicking the link below..”',
         },
       ],
-      projectURL:"https://my-react-library-app.herokuapp.com",
-      githubRepo:"https://tinyurl.com/n5en86zn"
+      projectURL: 'https://my-react-library-app.herokuapp.com',
+      githubRepo: 'https://tinyurl.com/n5en86zn',
     },
   ];
 };

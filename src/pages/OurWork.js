@@ -5,6 +5,9 @@ import styled from 'styled-components';
 import smartwear from '../img/smartwear.JPG';
 import ecom1 from '../img/ecommerce1.JPG';
 import Library1 from '../img/Library1.JPG';
+import Acis1 from '../img/ACIS1.png';
+import BSB1 from '../img/BSB1.png';
+
 //Animation
 import { motion } from 'framer-motion';
 import { useScroll } from '../components/useScroll';
@@ -32,14 +35,34 @@ const OurWork = () => {
     >
       <ScrollTop />
       <motion.div variants={sliderContainer}>
-        <Frame1 variants={slider}/>
-        <Frame2 variants={slider}/>
-        <Frame3 variants={slider}/>
-        <Frame4 variants={slider}/>
+        <Frame1 variants={slider} />
+        <Frame2 variants={slider} />
+        <Frame3 variants={slider} />
+        <Frame4 variants={slider} />
       </motion.div>
       <Movie variants={movieContainer}>
-        <motion.h2 variants={fade}>Ecommerce Application (Still at Development)</motion.h2>
-        <motion.div variants={lineAnim} className="line"/>
+        <motion.h2 variants={fade}>ACIS By AIMS</motion.h2>
+        <motion.div variants={lineAnim} className="line" />
+        <Link to="/work/acis">
+          <Hide>
+            <motion.img variants={photoAnim} src={Acis1} alt="EcomApp" />
+          </Hide>
+        </Link>
+      </Movie>
+      <Movie variants={movieContainer}>
+        <motion.h2 variants={fade}>Bodyshop Booster (BSB) V.2</motion.h2>
+        <motion.div variants={lineAnim} className="line" />
+        <Link to="/work/BSB">
+          <Hide>
+            <motion.img variants={photoAnim} src={BSB1} alt="EcomApp" />
+          </Hide>
+        </Link>
+      </Movie>
+      <Movie variants={movieContainer}>
+        <motion.h2 variants={fade}>
+          Ecommerce Application (Still at Development)
+        </motion.h2>
+        <motion.div variants={lineAnim} className="line" />
         <Link to="/work/e-commerce">
           <Hide>
             <motion.img variants={photoAnim} src={ecom1} alt="EcomApp" />
@@ -67,7 +90,7 @@ const OurWork = () => {
         initial="hidden"
       >
         <h2>Library Application</h2>
-        <motion.div variants={lineAnim} className="line"/>
+        <motion.div variants={lineAnim} className="line" />
         <Link to="/work/Library">
           <img src={Library1} alt="good-times" />
         </Link>
@@ -82,13 +105,13 @@ const Work = styled(motion.div)`
   padding: 5rem 10rem;
   background-color: black;
   h2 {
-    padding: 1rem ;
+    padding: 1rem;
   }
   @media (max-width: 1500px) {
     padding: 2rem 2rem;
   }
   @media (max-width: 768px) {
-    h2{
+    h2 {
       font-size: x-large;
     }
   }

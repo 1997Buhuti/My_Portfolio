@@ -13,7 +13,9 @@ const ProjectDetail = () => {
   const [project, setProject] = useState(null);
 
   useEffect(() => {
-    const currentProject = projects.filter((projectState) => projectState.url === url);
+    const currentProject = projects.filter(
+      (projectState) => projectState.url === url
+    );
     setProject(currentProject[0]);
   }, [projects, url]);
 
@@ -28,7 +30,7 @@ const ProjectDetail = () => {
         >
           <HeadLine>
             <h2>{project.title}</h2>
-            <img src={project.mainImg} alt="" />
+            <img src={project.mainImg} alt="" style={{ marginTop: '5rem' }} />
           </HeadLine>
           <Awards>
             {project.projectDetails.map((project) => (
@@ -41,10 +43,16 @@ const ProjectDetail = () => {
           </Awards>
           <URLInfo>
             <pre>
-              URL : <a target="_blank" href={project.projectURL}>{project.projectURL}</a>
+              URL :{' '}
+              <a target="_blank" href={project.projectURL}>
+                {project.projectURL}
+              </a>
             </pre>
             <pre>
-              GitHub Link : <a target="_blank" href={project.githubRepo}>{project.githubRepo}</a>
+              GitHub Link :{' '}
+              <a target="_blank" href={project.githubRepo}>
+                {project.githubRepo}
+              </a>
             </pre>
           </URLInfo>
           <ImageDisplay>
@@ -57,11 +65,11 @@ const ProjectDetail = () => {
   );
 };
 
-const Award = ({ title, description}) => {
+const Award = ({ title, description }) => {
   return (
     <ProjectStyle>
       <h3>{title}</h3>
-      <div className="line"/>
+      <div className="line" />
       <p>{description}</p>
     </ProjectStyle>
   );
@@ -74,14 +82,14 @@ const URLInfo = styled.div`
   width: 100%;
   align-content: center;
   text-align: center;
-  a{
+  a {
     color: red;
-    :hover{
+    :hover {
       color: blue;
     }
     cursor: pointer;
   }
-  pre{
+  pre {
     color: red;
   }
 `;
@@ -100,8 +108,8 @@ const HeadLine = styled.div`
     height: auto;
     object-fit: cover;
   }
-  @media (max-width:768px){
-    img{
+  @media (max-width: 768px) {
+    img {
       margin-top: 1rem;
     }
     min-height: auto;
@@ -123,7 +131,7 @@ const ProjectStyle = styled.div`
   h3 {
     font-size: 2rem;
   }
- 
+
   .line {
     width: 50%;
     background: #23d997;
